@@ -52,7 +52,7 @@ const projetsData = [
       "Modélisation prédictive du temps de survie de patientes. Comparaison d'algorithmes ML (Cox PH, Random Survival Forest, AFT Weibull) via Python et Lifelines.",
     image: "/images/projects/5.png",
     tag: ["All", "Data"],
-    gitUrl: "",
+    gitUrl: "https://github.com/loviaknh/portfolio-lovia",
     previewUrl: "",
   },
   {
