@@ -54,10 +54,10 @@ const EmailSection = () => {
           Diplômée en Systèmes Informatiques et Logiciels, je suis actuellement à la recherche de nouvelles opportunités professionnelles et d&apos;un Master MIAGE. Que ce soit pour une collaboration, un projet ou simplement échanger autour du dev et du design, ma boîte mail reste ouverte; je vous répondrai avec plaisir.
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/loviaknh">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://www.linkedin.com/in/lovia-kounouho">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
