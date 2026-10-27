@@ -47,7 +47,25 @@ const HeroSection = () => {
             Je conçois et développe des expériences web,
             à la croisée du code et du design.
           </p>
-          
+          {/* Badge de disponibilité */}
+          <div className="flex items-center gap-2 mb-6">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+            </span>
+            <span className="text-sm font-medium text-blue-400">
+              Disponible pour un stage ou une alternance
+            </span>
+          </div>
+          {/* Liens sociaux rapides */}
+          <div className="flex items-center gap-4 mt-8">
+            <a href="https://github.com/loviaknh" target="_blank" rel="noreferrer" className="text-[#ADB7BE] hover:text-white transition">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/lovia-kounouho" target="_blank" rel="noreferrer" className="text-[#ADB7BE] hover:text-white transition">
+              LinkedIn
+            </a>
+          </div>
           {/* ====== LES BOUTONS ====== */}
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Link

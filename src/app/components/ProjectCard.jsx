@@ -5,9 +5,11 @@ import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-[#181818]">
-      {/* Image avec ratio paysage forcé */}
-      <div className="relative h-52 md:h-72 w-full overflow-hidden rounded-t-xl">
+    // On ajoute "h-full flex flex-col" ici
+    <div className="group relative h-full flex flex-col overflow-hidden rounded-xl bg-[#181818]">
+      
+      {/* Image avec hauteur fixe */}
+      <div className="relative h-52 md:h-72 w-full overflow-hidden rounded-t-xl shrink-0">
         <Image
           src={imgUrl}
           alt={title}
@@ -16,10 +18,8 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
         />
 
-        {/* Overlay avec les liens (visible au survol) */}
+        {/* Overlay avec les liens */}
         <div className="absolute inset-0 bg-[#181818] bg-opacity-0 hidden group-hover:flex items-center justify-center group-hover:bg-opacity-80 transition-all duration-500 z-10">
-          
-          {/* Bouton GitHub : S'affiche UNIQUEMENT si gitUrl existe */}
           {gitUrl && gitUrl.length > 0 && (
             <Link
               href={gitUrl}
@@ -32,7 +32,6 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
             </Link>
           )}
 
-          {/* Bouton Preview : S'affiche UNIQUEMENT si previewUrl existe */}
           {previewUrl && previewUrl.length > 0 && (
             <Link
               href={previewUrl}
@@ -47,8 +46,8 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         </div>
       </div>
 
-      {/* Texte sous l'image */}
-      <div className="text-white rounded-b-xl p-6">
+      {/* Texte : flex-grow permet de prendre tout l'espace restant */}
+      <div className="text-white rounded-b-xl p-6 flex flex-col flex-grow">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE] text-sm leading-relaxed">{description}</p>
       </div>

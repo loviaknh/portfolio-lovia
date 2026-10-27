@@ -1,9 +1,8 @@
 import './globals.css'
-import { Inter, Playfair_Display, Akronim } from 'next/font/google'
+import { Plus_Jakarta_Sans, Akronim } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
-// On ajoute Akronim. Elle n'a qu'une seule graisse (400).
+// On utilise Jakarta et Akronim
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakarta' })
 const akronim = Akronim({ weight: '400', subsets: ['latin'], variable: '--font-akronim' })
 
 export const metadata = {
@@ -14,7 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${inter.variable} ${playfair.variable} ${akronim.variable} font-sans`}>
+      {/* C'est ici que ça bloquait : on utilise jakarta et akronim */}
+      <body className={`${jakarta.variable} ${akronim.variable} font-sans`}>
         {children}
       </body>
     </html>

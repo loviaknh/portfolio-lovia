@@ -24,22 +24,29 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2 space-y-1">
-        <li>Licence SIL — HECM Porto-Novo (2023–2026)</li>
+        <li>Licence SIL - HECM Porto-Novo (2023–2026)</li>
         <li>École d’Été en Intelligence Artificielle (2026)</li>
-        <li>Baccalauréat série D — CEG d’Application (2022)</li>
+        <li>Baccalauréat série D - CEG d’Application (2022)</li>
       </ul>
     ),
   },
-  {
-    title: "Attestations et Certifications",
+    {
+    title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2 space-y-1">
-        <li>Attestation de stage Assemblée nationale</li>
+      <ul className="list-disc pl-2 space-y-2">
+        <li>
+          <a href="https://www.linkedin.com/..." target="_blank" className="hover:text-blue-400 underline decoration-blue-500/30">
+            Certificat Kanz AI Hackathon
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/..." target="_blank" className="hover:text-blue-400 underline decoration-blue-500/30">
+            Certificat NASA Space Apps Challenge
+          </a>
+        </li>
         <li>Certificat EEIA 2026</li>
-        <li>Certificat Kanz AI Hackathon - plus grande leçon d’IA en ligne</li>
-        <li>Certificat NASA Space Apps Challenge</li>
-        <li>Attestation de stage Ibudo</li>
+        <li>Attestation de stage Assemblée nationale</li>
       </ul>
     ),
   },

@@ -49,7 +49,7 @@ const projetsData = [
     id: 5,
     title: "Portfolio",
     description:
-      "Modélisation prédictive du temps de survie de patientes. Comparaison d'algorithmes ML (Cox PH, Random Survival Forest, AFT Weibull) via Python et Lifelines.",
+      "Développement d'une interface d'analyse de données médicales. Intégration et visualisation d'algorithmes de Machine Learning pour l'aide à la décision clinique.",
     image: "/images/projects/5.png",
     tag: ["All", "Data"],
     gitUrl: "https://github.com/loviaknh/portfolio-lovia",
@@ -160,6 +160,7 @@ const ProjectsSection = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.2 }}
+            className="h-full"
           >
             <ProjectCard
               title={project.title}
@@ -167,6 +168,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              
             />
           </motion.li>
         ))}
